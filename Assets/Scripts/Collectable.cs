@@ -5,11 +5,11 @@ using UnityEngine;
 public class Collectable : MonoBehaviour 
 {
 
-	public AudioSource coin;
+	//public AudioSource coin;
 	// Use this for initialization
 	void Start () 
 	{
-		coin = GameObject.FindGameObjectWithTag ("CoinSound").GetComponent<AudioSource> ();
+		//coin = GameObject.FindGameObjectWithTag ("CoinSound").GetComponent<AudioSource> ();
 	}
 	
 	void OnTriggerEnter (Collider other) 
@@ -17,8 +17,8 @@ public class Collectable : MonoBehaviour
 		if (other.tag.Equals("Player")) 
 		{
 			Debug.Log ("Collected");
-			FindObjectOfType<Counter> ().IncreaseCount ();
-			coin.Play ();
+			//FindObjectOfType<Counter> ().IncreaseCount ();
+			//coin.Play ();
 			Destroy(this.gameObject);
 		}
 	}
