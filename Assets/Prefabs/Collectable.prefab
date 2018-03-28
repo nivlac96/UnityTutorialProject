@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4197287821819386}
   - component: {fileID: 33390466399719468}
-  - component: {fileID: 135489948156107648}
   - component: {fileID: 23482563310255776}
   - component: {fileID: 114123300461878844}
   - component: {fileID: 82929357564464662}
+  - component: {fileID: 65568204025474258}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932642068268858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.974216, y: 5.34, z: 32.61}
+  m_LocalPosition: {x: -21.52, y: 5.3, z: 31.62}
   m_LocalScale: {x: 0.33572173, y: 0.3357217, z: 0.3357217}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,19 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1932642068268858}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65568204025474258
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932642068268858}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82929357564464662
 AudioSource:
   m_ObjectHideFlags: 1
@@ -152,7 +164,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -177,15 +189,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coin: {fileID: 0}
---- !u!135 &135489948156107648
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1932642068268858}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  spinSpeed: 70

@@ -6,10 +6,18 @@ public class Collectable : MonoBehaviour
 {
 
 	public AudioSource coin;
-	// Use this for initialization
+
+	public float spinSpeed = 5;
+
 	void Start () 
 	{
 		coin = GameObject.FindGameObjectWithTag ("CoinSound").GetComponent<AudioSource> ();
+	}
+
+	void Update () 
+	{
+		float step = spinSpeed * Time.deltaTime;
+		transform.Rotate(new Vector3(0.0f, step, 0.0f));
 	}
 	
 	void OnTriggerEnter (Collider other) 
